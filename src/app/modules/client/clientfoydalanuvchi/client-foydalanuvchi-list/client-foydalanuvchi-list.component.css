@@ -1,0 +1,295 @@
+/* ../../../../../assets/mask-group-QSX.png */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  div{
+    background-color: white;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    border-bottom: 3px solid #ccc; /* Ichki sichqoncha uchun */
+  }
+  
+  .icon, .text-button, .button {
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.3s, color 0.3s; /* O'zgarishlarga o'tish vaqtini belgilash */
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* O'zgarishlarga o'tish vaqtini belgilash */
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .background-container {
+    background-image: url('../../../../../assets/mask-group-QSX.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+  }
+  
+  .background-text-input {
+    background-color: white;
+    padding: 10px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .background-text-input input {
+    padding: 8px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  .background-text-input .button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+    /* O'zgarishlarga o'tish vaqtini belgilash */
+  }
+  
+  /* Hover va Active holatlarda rang o'zgartirish */
+  .text-button:hover, .icon:hover, .text-button:active, .icon:active, .background-text-input .button:hover, .background-text-input .button:active, .dropdown:hover .dropbtn {
+    background-color: #ffd700; /* Sariq rang */
+    color: #fff; /* Oq rangdagi matn */
+  }
+  
+  /* Yangi shaharlar uchun ranglarni o'zgartiring */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    color: #000;
+  }
+  
+  .dropdown-content a span {
+    float: right;
+  }
+  
+  .text-button{
+  background-color: #f7f7f7;
+  border: none;
+  color: rgb(15, 15, 15);
+  padding-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 22px;
+  font-size: 14px;
+  }
+  .kirishIconRasm{
+    width: 70px;
+    height: 25px;
+  }
+  .icon{
+    border-color: white;
+  }
+  .qidirAsosiy{
+    border-radius: 2px;
+    background-color: yellow;
+    text-align: center;
+    width: 12px;
+    height: 12px;
+  }
+  .RasmMarkazidagiButton{
+    display: inline-block;
+    background-color: yellow;
+    border-radius: 12px;
+    text-align: center;
+  }
+  
+  .dropbtn{
+    text-align: center;
+    padding: 9px;
+    background-color: white;
+    border-color: white;
+    border-radius: 22px;
+  }
+.text-button{
+    background-color: white;
+}
+.kirishdagiLoveIcon{
+height: 35px;
+width: 35px;
+}
+.tashrifBuyurmoqbuttoni{
+    height: 35px;
+}
+
+.KirishQismidagiuchRasm{
+    float: left;
+    width: 32.7%;
+    padding: 5px;
+}
+
+.KirishQismidagiuchRasm:nth-of-type(1){
+    background-image: url("../../../../../assets/-Jao.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    width: 32%;
+    height: 50vh;
+    border-radius: 22px;
+    margin: 5px;
+    
+}
+.KirishQismidagiuchRasm:nth-of-type(2){
+    background-image: url("../../../../../assets/mask-group-JUb.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    width: 32%;
+    height: 50vh;
+    border-radius: 22px;
+    margin: 5px;
+    /* background-size: cover; */
+}
+.KirishQismidagiuchRasm:nth-of-type(3){
+    background-image: url("../../../../../assets/mask-group-so9.png");
+    background-repeat: no-repeat;
+    /* background-size: 300px 200px; */
+    background-size: 100% 100%;
+    background-position: center center;
+    width: 32%;
+    height: 50vh;
+    margin: 5px;
+    
+    border-radius: 22px;
+}
+.KirishQismidagikkiRasm:nth-of-type(1){
+    background-image: url("../../../../../assets/find-the-right-keyword-strategy-scaled-1-1.png");
+    background-repeat: no-repeat;
+    /* background-size: 300px 200px; */
+    background-size: 100% 100%;
+    background-position: center center;
+    width: 48%;
+    height: 50vh;
+    margin: 5px;
+    border-radius: 22px;
+}
+.KirishQismidagikkiRasm:nth-of-type(2){
+    background-image: url("../../../../../assets/find-the-right-keyword-strategy-scaled-1-1-ZGX.png");
+    background-repeat: no-repeat;
+    /* background-size: 300px 200px; */
+    background-size: 100% 100%;
+    background-position: center center;
+    width: 48%;
+    height: 50vh;
+    margin:5px;
+    border-radius: 22px;
+}
+.KirishQismidagikkiRasm img{
+    width: 100%;
+    border-radius: 22px;
+    height: 50vh;
+}
+.KirishQismidagikkiRasm{
+    float: left;
+    width: 49.2%;
+    padding: 5px;
+}
+.textBackgroundRasmlarga{
+    color: white;
+}
+.beshrasmButton{
+    border-radius: 12px;
+    background-color: #ffd700;
+}
+            
+.ekskursiyalarRoyxatiniOchish{
+    border-radius: 12px;
+    background-color: #ffd700;
+    align-items: center;
+}
+
+.otzivi{
+    background-color: white;
+    background-image: url('../../../../../assets/mask-group-ygf.png');
+    background-size: 100% 100%;
+    background-position: center center;
+    width: 100%;
+    height: 70vh;
+    margin:5px;
+    border-radius: 22px;
+    padding-left: 50px;
+}
+.otziviKlassRasm{
+    border-radius: 22px;
+    width: 30px;
+    height: 20;
+}
+.otzivKlass{
+    border-radius: 22px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 10px ;
+}
+
+.Xizmathaqida{
+    display: flex;
+    height: 100%;
+    background-color: white;
+    border-color: white;
+}
+.servislar{
+    flex: 1;
+    border: 1px solid #ccc;
+    border-color: white;
+}
+.ServislarimizRasm{
+    border-radius: 22px;
+    width: 35px;
+    height: 35px;
+}
+.payment-methods-0070bdcc50eb301a4b796768c16a7f37-1-JNF{
+    width: 19.471rem;
+    height: 1.4rem;
+    align-items: flex-end;
+}
+.tashrifBuyurmoqbuttoni{
+    border-radius: 22px;
+    background-color: white;
+}
+.tashrifBuyurmoqbuttoni:hover{
+    background-color: #ffd700;
+}
