@@ -5,3 +5,9 @@ export interface Createfoydalanuvchi{
     parol:string,
     telNomer:string
 }
+export interface updatePasswordFoydalanuvchi{
+    ism:string,
+    email:string,
+    parol:string,
+    telNomer:string,
+}

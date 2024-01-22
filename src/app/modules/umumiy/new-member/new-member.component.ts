@@ -3,6 +3,7 @@ import { AbstractControl, FormControl, FormGroup, NonNullableFormBuilder, Valida
 import { NzFormTooltipIcon } from 'ng-zorro-antd/form';
 import { Createfoydalanuvchi } from '../AuthModel/foydalanuvchi.model';
 import { NewMemberService } from '../loginService/new-member.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-member',
@@ -66,14 +67,21 @@ export class NewMemberComponent {
     captcha: ['', [Validators.required]],
     
   });
-  constructor(private fb: NonNullableFormBuilder,private $nmf:NewMemberService) {
+  constructor(private router: Router,private fb: NonNullableFormBuilder,private $nmf:NewMemberService) {
   }
-  request = this.validateForm.getRawValue()
 
   foydalanuvchis!:Createfoydalanuvchi;
 add(){
-  console.log(this.validateForm.getRawValue())
-  console.log(this.request)
+  if(this.validateForm.invalid){
+    Object.values(this.validateForm.controls).forEach(control => {
+      if (control.invalid) {
+        control.markAsDirty();
+        control.updateValueAndValidity({ onlySelf: true });
+      }
+    });
+    return;
+  } 
+  
   this.foydalanuvchis={
     ism : this.validateForm.getRawValue().ism,
     familiya: this.validateForm.getRawValue().familiya,
@@ -81,11 +89,15 @@ add(){
     parol: this.validateForm.getRawValue().password,
     telNomer: this.validateForm.getRawValue().phoneNumberPrefix+this.validateForm.getRawValue().phoneNumber
   }
-  console.log(this.foydalanuvchis)
+  // console.log(this.foydalanuvchis)
   this.$nmf.createFoydalanuvchi(this.foydalanuvchis).subscribe({
     next:()=>{alert(`qo'shildi`)},
     error:()=>{alert(`qabul qilinmadi`)}
   })
+  
+  const newUrl = '/tekshiruv';
+  // Router ni ishlatib, URL ni o'zgartirish
+  this.router.navigate([newUrl]);
 }
 }
 
