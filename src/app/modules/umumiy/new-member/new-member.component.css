@@ -1,24 +1,17 @@
+[nz-form] {
+    max-width: 600px;
+    width: 600px;
+  }
 
-      .login-form {
-        max-width: 300px;
-        width: 300px;
-      }
+  .phone-select {
+    width: 70px;
+  }
 
-      .login-form-margin {
-        margin-bottom: 16px;
-      }
-
-      .login-form-forgot {
-        float: right;
-      }
-
-      .login-form-button {
-        width: 100%;
-        border-radius: 22px;
-      }
-
-.PE{
-    
+  .register-are {
+    margin-bottom: 8px;
+  }
+.FP{
+     
     margin: 0;
     padding: 0;
     background-image: url(../../../../assets/find-the-right-keyword-strategy-scaled-1-1-ZGX.png);

@@ -1,14 +1,14 @@
 import { Injectable } from "@angular/core";
-import { Xizmat } from "../xizmatlar.model/xizmat.model";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { catchError } from "rxjs/internal/operators/catchError";
+import { Shahar } from "../foydalanuvchiModels/shahar.model";
 import { auth, postToken } from "../../../umumiy/AuthModel/auth.model";
 
 @Injectable({
   providedIn: 'root'
 })
 
-export class XizmatService{
+export class ShaharService{
   constructor(private http:HttpClient){}
   baseUrl = 'https://localhost:7257/api/Shahar/';
 
@@ -59,7 +59,7 @@ getAllXizmatlar(token:string){
   });
     // return this.xizmatlar;
     
-    return this.http.get<Xizmat[]>(this.baseUrl+'GetAllShaharlar', { headers })
+    return this.http.get<Shahar[]>(this.baseUrl+'GetAllShaharlar', { headers })
     .pipe(
       catchError((error) => {
         // Error handling

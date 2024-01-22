@@ -10,9 +10,7 @@ export class BittaXizmatBolimiComponent {
   @Input()
   xizmat:Xizmat = {
     id:0,
-    xizmatNomi:'book',
-    translation:'kitob',
-    example:'This book is interesting',
-    photo:'./assets/87704.jpg'
+    nomi:'book',
+    rasm:'./assets/87704.jpg'
   };
 }

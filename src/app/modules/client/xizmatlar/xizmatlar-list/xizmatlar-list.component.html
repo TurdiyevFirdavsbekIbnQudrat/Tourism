@@ -40,7 +40,8 @@
                 </div>
             </div>
             <div class="tashrifBuyurmoq">
-                <button class="qidiruvUchun"><img class="Qidirmoq" src="../../../../../assets/-Hmm.png" alt="Izlash"></button>
+                <button class="qidiruvUchun"><img class="Qidirmoq" src="../../../../../assets/-Hmm.png"
+                        alt="Izlash"></button>
                 <button class="tashrifBuyurmoqbuttoni">tashrif buyurish</button>
             </div>
         </div>
@@ -49,15 +50,19 @@
     <div class="background-container">
         <div class="background-text-input">
             Tog'li joy
-          </div>
+        </div>
     </div>
     <div>
         <div>
-            Dinamik bo'ladi
+            <div class="words">
+                <app-bitta-xizmat-bolimi  *ngFor="let w of xizmatlar"
+                    [xizmat]="w"></app-bitta-xizmat-bolimi>
+            </div>
+
         </div>
         <div>
-            
-            <button class = "xizmatlarQoshishButton">yana</button>
+
+            <button class="xizmatlarQoshishButton">yana</button>
         </div>
     </div>
     <div>
@@ -67,24 +72,24 @@
             <div class="TanishtiruvManzaralari">
                 <div class="KirishQismidagiuchRasm">
                     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                     <h5 class="textBackgroundRasmlarga"> Sankt-Peterburgga ekskursiya</h5>
-                     <button class="beshrasmButton">15 ekskursiya</button>
+                    <h5 class="textBackgroundRasmlarga"> Sankt-Peterburgga ekskursiya</h5>
+                    <button class="beshrasmButton">15 ekskursiya</button>
                 </div>
                 <div class="KirishQismidagiuchRasm">
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                <h5 class="textBackgroundRasmlarga"> Istanbulga ekskursiya</h5>
-                <button class="beshrasmButton">15 ekskursiya</button>
-               
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <h5 class="textBackgroundRasmlarga"> Istanbulga ekskursiya</h5>
+                    <button class="beshrasmButton">15 ekskursiya</button>
+
                 </div>
                 <div class="KirishQismidagiuchRasm">
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                <h5 class="textBackgroundRasmlarga"> Dubayga ekskursiya</h5>
-                <button class="beshrasmButton">15 ekskursiya</button>
-               
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <h5 class="textBackgroundRasmlarga"> Dubayga ekskursiya</h5>
+                    <button class="beshrasmButton">15 ekskursiya</button>
+
                 </div>
             </div>
         </div>
-            <!-- <div>
+        <!-- <div>
                 <div class="KirishQismidagikkiRasm">
                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 <h5 class="textBackgroundRasmlarga"> Kalingradga ekskursiya</h5>
@@ -97,20 +102,13 @@
                 <button class="beshrasmButton">15 ekskursiya</button>
                
                 </div> -->
-            <!-- </div> -->
-        
+        <!-- </div> -->
+
     </div>
+
     <br>
-    <div>
-        <h1>Ekskursiya</h1>
-        <h2>Databazadan ma'lumotlar keladi</h2>
-    </div>
-    
-    
-    <div class="words">
-            <app-bitta-xizmat-bolimi [routerLink]="['xizmatlar']" *ngFor="let w of xizmatlar" [xizmat]="w"></app-bitta-xizmat-bolimi>
-    </div>      
-    
+
+
     <br>
     <!-- <div class="otzivi">
         <br><br><br><br><br><br>
@@ -119,48 +117,51 @@
         <button class="otzivKlass"><img class="otziviKlassRasm" src="../../../../../assets/-muM.png" alt="telegram">Telegram</button>
         <button class="otzivKlass"><img class="otziviKlassRasm" src="../../../../../assets/-NjM.png" alt="vkontakt">VKontakt</button>
     </div> -->
-    
-    <br><br><br><br>
-    <div>
-    <div class="Xizmathaqida">
-        <div class="servislar">
-            <img class="kirishIconRasm" src="../../../../../assets/-1Gf.png" alt="teplos">
-            <br>
-            <br>
-            <h5>Ijtimoiy tarmoqlar</h5>
-            <div>
-                <button class="Servislarimiz"><img class="ServislarimizRasm" src="../../../../../assets/-muM.png" alt="telegram"></button>
-                <button class="Servislarimiz"><img class="ServislarimizRasm" src="../../../../../assets/-NjM.png" alt="vkontakt"></button>
-                <button class="Servislarimiz"><img class="ServislarimizRasm" src="../../../../../assets/-Nh9.png" alt="WhatSapp"></button>                
+
+    <div class="xizmathaqidaMalumotlar">
+        <div class="Xizmathaqida">
+            <div class="servislar">
+                <img class="kirishIconRasm" src="../../../../../assets/-1Gf.png" alt="teplos">
+                <br>
+                <br>
+                <h5>Ijtimoiy tarmoqlar</h5>
+                <div>
+                    <button class="Servislarimiz"><img class="ServislarimizRasm" src="../../../../../assets/-muM.png"
+                            alt="telegram"></button>
+                    <button class="Servislarimiz"><img class="ServislarimizRasm" src="../../../../../assets/-NjM.png"
+                            alt="vkontakt"></button>
+                    <button class="Servislarimiz"><img class="ServislarimizRasm" src="../../../../../assets/-Nh9.png"
+                            alt="WhatSapp"></button>
+                </div>
+            </div>
+            <div class="servislar">Servis
+                <h4>Servise</h4>
+                <h4>Blog</h4>
+                <h4>FAQ</h4>
+                <h4>to'lov usullari</h4>
+            </div>
+            <div class="servislar">Gidlar
+                <h4>gidlar haqida</h4>
+                <h4>ish qoidalari</h4>
+            </div>
+            <div class="servislar">Hujjat
+                <h4>chiptalarni qaytarish</h4>
+                <h4>kelishuv taklifi</h4>
+                <h4>saytlardan foydalanish shartlari</h4>
+                <h4>shaxsiy ma'lumotlarni qayta ishlash</h4>
+                <h4>rekvizit</h4>
+            </div>
+            <div class="servislar">Mijozlarni qo'llab quvvatlash
+                <h4>telefon:+7(495)123-45-67</h4>
+                <h4>email:hellotrevelme.ru</h4>
+                <h4>Ofis:moshkva shahri,nazvanie ko'chasi 10-uy,ofis 11</h4>
             </div>
         </div>
-        <div class="servislar">Servis
-            <h4>Servise</h4>
-            <h4>Blog</h4>
-            <h4>FAQ</h4>
-            <h4>to'lov usullari</h4>
-        </div>
-        <div class="servislar">Gidlar
-             <h4>gidlar haqida</h4>
-             <h4>ish qoidalari</h4>
-        </div>
-        <div class="servislar">Hujjat
-            <h4>chiptalarni qaytarish</h4>
-            <h4>kelishuv taklifi</h4>
-            <h4>saytlardan foydalanish shartlari</h4>
-            <h4>shaxsiy ma'lumotlarni qayta ishlash</h4>
-            <h4>rekvizit</h4>
-        </div>
-        <div class="servislar">Mijozlarni qo'llab quvvatlash
-            <h4>telefon:+7(495)123-45-67</h4>
-            <h4>email:hellotrevelme.ru</h4>
-            <h4>Ofis:moshkva shahri,nazvanie ko'chasi 10-uy,ofis 11</h4>
+        <div>
+            <img class="payment-methods-0070bdcc50eb301a4b796768c16a7f37-1-JNF"
+                src="../../../../../assets/payment-methods-0070bdcc50eb301a4b796768c16a7f37-1-Hfy.png" />
         </div>
     </div>
-    <div>
-        <img class="payment-methods-0070bdcc50eb301a4b796768c16a7f37-1-JNF" src="../../../../../assets/payment-methods-0070bdcc50eb301a4b796768c16a7f37-1-Hfy.png"/>
-    </div>
-</div>
 
 </body>
 

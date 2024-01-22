@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { ClientfoydalanuvchiComponent } from './clientfoydalanuvchi.component';
 import { ClientFoydalanuvchiListComponent } from './client-foydalanuvchi-list/client-foydalanuvchi-list.component';
 import { ClientfoydalanuvchiRoutingModule } from './clientfoydalanuvchi-routing.module';
+import { BittaShaxarComponent } from './bitta-shaxar/bitta-shaxar.component';
 
 
 
@@ -9,6 +10,7 @@ import { ClientfoydalanuvchiRoutingModule } from './clientfoydalanuvchi-routing.
   declarations: [
     ClientfoydalanuvchiComponent,
     ClientFoydalanuvchiListComponent,
+    BittaShaxarComponent,
   ],
   imports: [
     ClientfoydalanuvchiRoutingModule

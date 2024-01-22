@@ -91,9 +91,13 @@
             </div>
         </div>
     </div>
-    <div>
+    <div class="xizmathaqidaMalumotlar">
         <h1>Ekskursiya</h1>
-        <h2>Databazadan ma'lumotlar keladi</h2>
+        <div class="words">
+            <app-bitta-shaxar  *ngFor="let w of xizmatlar"
+                [shahar]="w"></app-bitta-shaxar>
+        </div>
+
         <button class="ekskursiyalarRoyxatiniOchish">Ekskursiya</button>
     </div>
     <div class="otzivi">

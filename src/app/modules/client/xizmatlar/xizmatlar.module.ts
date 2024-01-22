@@ -18,6 +18,7 @@ import { XizmatService } from './Service/xizmat.service';
     CommonModule,
     XizmatlarRoutingModule,
     
+    
   ],
   providers:[XizmatService]
 })
