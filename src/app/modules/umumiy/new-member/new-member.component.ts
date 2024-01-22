@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, NonNullableFormBuilder, ValidatorFn, Validators } from '@angular/forms';
 import { NzFormTooltipIcon } from 'ng-zorro-antd/form';
 import { Createfoydalanuvchi } from '../AuthModel/foydalanuvchi.model';
+import { NewMemberService } from '../loginService/new-member.service';
 
 @Component({
   selector: 'app-new-member',
@@ -63,20 +64,29 @@ export class NewMemberComponent {
     phoneNumber: ['', [Validators.required]],
     familiya: ['', [Validators.required]],
     captcha: ['', [Validators.required]],
-    agree: [false]
+    
   });
-  constructor(private fb: NonNullableFormBuilder,) {
+  constructor(private fb: NonNullableFormBuilder,private $nmf:NewMemberService) {
   }
   request = this.validateForm.getRawValue()
 
-foydalanuvchi:Createfoydalanuvchi ={
-  ism: this.request.ism,
-  familiya: this.request.familiya,
-  email: this.request.email,
-  parol: this.request.password,
-  telNomer: this.request.phoneNumberPrefix+this.request.phoneNumber
+  foydalanuvchis!:Createfoydalanuvchi;
+add(){
+  console.log(this.validateForm.getRawValue())
+  console.log(this.request)
+  this.foydalanuvchis={
+    ism : this.validateForm.getRawValue().ism,
+    familiya: this.validateForm.getRawValue().familiya,
+    email: this.validateForm.getRawValue().email,
+    parol: this.validateForm.getRawValue().password,
+    telNomer: this.validateForm.getRawValue().phoneNumberPrefix+this.validateForm.getRawValue().phoneNumber
+  }
+  console.log(this.foydalanuvchis)
+  this.$nmf.createFoydalanuvchi(this.foydalanuvchis).subscribe({
+    next:()=>{alert(`qo'shildi`)},
+    error:()=>{alert(`qabul qilinmadi`)}
+  })
 }
-
 }
 
 
